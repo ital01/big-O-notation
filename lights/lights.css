@@ -1,0 +1,61 @@
+:root {
+  --background-color: #f0f0f0;
+  --container-bg-color: #ffffff;
+  --box-shadow-color: #00000029;
+  --light-off-color: #E0E0E0;
+  --light-on-color: #FFEC5C;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: var(--container-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--box-shadow-color);
+}
+
+#lights-row {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.light {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--light-off-color);
+  transition: background-color 0.3s;
+}
+
+.light.on {
+  background-color: var(--light-on-color);
+}
+
+#light-index {
+  padding: 10px;
+  width: 50%;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
