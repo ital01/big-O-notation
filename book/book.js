@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const startSearchButton = document.getElementById('start-search');
   const result = document.getElementById('result');
 
-  const numPages = 500;
+  const numPages = 300;
   for (let i = 1; i <= numPages; i++) {
     const page = document.createElement('div');
     page.classList.add('page');
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   startSearchButton.addEventListener('click', () => {
     const targetPage = parseInt(targetPageInput.value);
     if (isNaN(targetPage) || targetPage < 1 || targetPage > numPages) {
-      result.textContent = 'Por favor, insira um número de página válido entre 1 e 100.';
+      result.textContent = `Por favor, insira um número de página válido entre 1 e ${numPages}.`;
       return;
     }
 
