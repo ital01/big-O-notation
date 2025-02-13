@@ -6,10 +6,10 @@
   --sorted-color: #34a853;
   --background-color: #f9f9f9;
   --font-family: 'Arial', sans-serif;
-  --font-size-small: 14px;
-  --font-size-medium: 16px;
-  --font-size-large: 20px;
-  --border-radius: 5px;
+  --font-size-small: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.4rem;
+  --border-radius: 6px;
   --transition-duration: 0.3s;
   --padding-small: 10px;
   --padding-medium: 10px 20px;
@@ -118,7 +118,7 @@ button:focus {
 }
 
 .move-animation {
-  animation: moveEffect 1s ease-in-out; /* Ajustar a duração da animação para 1 segundo */
+  animation: moveEffect 1s ease-in-out;
 }
 
 @keyframes moveEffect {
@@ -126,7 +126,7 @@ button:focus {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(10px); /* Aumentar a distância do movimento */
+    transform: translateX(10px);
   }
   100% {
     transform: translateX(0);
