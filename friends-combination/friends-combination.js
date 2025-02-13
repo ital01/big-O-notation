@@ -39,10 +39,13 @@ function generatePairs(friends) {
 
 const generateButton = document.getElementById("generate-button");
 const pairsContainer = document.getElementById("pairs-container");
+const resultTitle = document.createElement("h2");
+pairsContainer.before(resultTitle);
 
 generateButton.addEventListener("click", () => {
   pairsContainer.innerHTML = "";
   const pairs = generatePairs(friends);
+  resultTitle.innerText = `Total de Resultados: ${pairs.length}`;
   pairs.forEach((pairObj, index) => {
     const pairCard = document.createElement("div");
     pairCard.classList.add("pair-card");
