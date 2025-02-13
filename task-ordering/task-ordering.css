@@ -23,6 +23,8 @@
   --button-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   --button-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.2);
   --focus-outline: 2px solid var(--primary-color);
+  --low-priority-color: #ff4d4d;
+  --high-priority-color: #8ecf25;
 }
 
 /* Global Styles */
@@ -92,6 +94,12 @@ p {
   background-color: var(--sorted-color);
   transform: scale(1);
   transition: background-color var(--transition-duration) ease;
+  color: white; /* Adiciona cor do texto branco para contraste */
+}
+
+/* Adiciona a cor verde para itens ordenados */
+.sorted {
+  background-color: var(--sorted-color);
 }
 
 /* Button Styles */
