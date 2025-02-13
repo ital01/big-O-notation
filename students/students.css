@@ -1,8 +1,8 @@
 :root {
-  --background-color: #f0f0f0;
+  --background-color: #ffffff;
   --container-bg-color: #ffffff;
   --box-shadow-color: #00000029;
-  --body-bg-color: #f4f4f4;
+  --body-bg-color: #f0f8ff;
   --person-bg-color: #1a73e8;
   --person-counted-bg-color: #34a853;
   --button-bg-color: #1a73e8;
@@ -37,6 +37,7 @@ h1 {
   padding: 20px;
   margin: 20px auto;
   width: 280px;
+  background-color: var(--container-bg-color);
   box-shadow: 0 4px 8px var(--box-shadow-color);
   transition: box-shadow 0.3s ease;
 }
