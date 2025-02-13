@@ -1,0 +1,134 @@
+/* Root Variables */
+:root {
+  --primary-color: #1a73e8;
+  --primary-color-hover: #1558b8;
+  --highlight-color: #fbbc05;
+  --sorted-color: #34a853;
+  --background-color: #f9f9f9;
+  --font-family: 'Arial', sans-serif;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --border-radius: 5px;
+  --transition-duration: 0.3s;
+  --padding-small: 10px;
+  --padding-medium: 10px 20px;
+  --margin-top: 20px;
+  --gap: 10px;
+  --task-width: 100px;
+  --task-height: 100px;
+  --max-width: 800px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 6px 8px rgba(0, 0, 0, 0.15);
+  --button-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --button-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --focus-outline: 2px solid var(--primary-color);
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  text-align: center;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1 {
+  margin-top: var(--margin-top);
+  font-size: var(--font-size-large);
+}
+
+p {
+  margin-top: var(--margin-top);
+  font-size: var(--font-size-medium);
+}
+
+/* Container */
+#task-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: var(--margin-top) auto;
+  max-width: var(--max-width);
+  gap: var(--gap);
+}
+
+/* Task Styles */
+.task {
+  width: var(--task-width);
+  height: var(--task-height);
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-small);
+  transition: all var(--transition-duration) ease;
+  padding: var(--padding-small);
+  box-shadow: var(--box-shadow);
+}
+
+.task:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.task.highlight {
+  transform: scale(1.2);
+  background-color: var(--highlight-color);
+  transition: transform var(--transition-duration) ease;
+}
+
+.task.sorted {
+  background-color: var(--sorted-color);
+  transform: scale(1);
+  transition: background-color var(--transition-duration) ease;
+}
+
+/* Button Styles */
+button {
+  padding: var(--padding-medium);
+  font-size: var(--font-size-medium);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin-top: var(--margin-top);
+  transition: background-color var(--transition-duration) ease;
+  box-shadow: var(--button-shadow);
+}
+
+button:hover {
+  background-color: var(--primary-color-hover);
+  box-shadow: var(--button-shadow-hover);
+}
+
+button:focus {
+  outline: var(--focus-outline);
+}
+
+.move-animation {
+  animation: moveEffect 1s ease-in-out; /* Ajustar a duração da animação para 1 segundo */
+}
+
+@keyframes moveEffect {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px); /* Aumentar a distância do movimento */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

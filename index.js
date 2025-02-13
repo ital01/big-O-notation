@@ -2,6 +2,7 @@ const problems = [
   { id: 1, name: "Problema das luzes", link: "./lights/lights.html" },
   { id: 2, name: "Problema dos alunos", link: "./students/students.html" },
   { id: 3, name: "Problema do livro", link: "./book/book.html" },
+  { id: 4, name: "Problema da lista de tarefas", link: "./task-ordering/task-ordering.html" },
 ];
 
 const container = document.getElementById("problems-container");
